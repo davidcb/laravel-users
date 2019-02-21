@@ -8,6 +8,7 @@ class UsersServiceProvider extends ServiceProvider {
 
 	public function boot()
 	{
+		$this->loadMigrationsFrom(__DIR__ . '/database/migrations');
 		$this->loadViewsFrom(__DIR__ . '/resources/views', 'users');
 		$this->loadRoutesFrom(__DIR__ . '/routes/web.php');
 	}
