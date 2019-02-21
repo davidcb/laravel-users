@@ -1,5 +1,5 @@
 {
-	"name": "davidcb/users",
+	"name": "davidcb/laravel-users",
 	"description": "Users management for Laravel",
 	"type": "library",
 	"license": "MIT",
@@ -19,10 +19,7 @@
 		"laravel": {
 			"providers": [
 				"Davidcb\\Users\\UsersServiceProvider"
-			]/*,
-			"aliases": {
-				"Users": "Davidcb\\Users\\Facade"
-			}*/
+			]
 		}
 	}
 }
