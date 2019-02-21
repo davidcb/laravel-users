@@ -1,0 +1,28 @@
+{
+	"name": "davidcb/users",
+	"description": "Users management for Laravel",
+	"type": "library",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "David Couto",
+			"email": "davidcouto@gmail.com"
+		}
+	],
+	"require": {},
+	"autoload": {
+		"psr-4": {
+			"Davidcb\\Users\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Davidcb\\Users\\UsersServiceProvider"
+			]/*,
+			"aliases": {
+				"Users": "Davidcb\\Users\\Facade"
+			}*/
+		}
+	}
+}
