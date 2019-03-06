@@ -9,7 +9,10 @@
 			"email": "davidcouto@gmail.com"
 		}
 	],
-	"require": {},
+	"require": {
+		"php": ">=7",
+        "illuminate/support": "5.5.x|5.6.x|5.7.x|5.8.x"
+	},
 	"autoload": {
 		"psr-4": {
 			"Davidcb\\Users\\": "src/"
@@ -19,7 +22,10 @@
 		"laravel": {
 			"providers": [
 				"Davidcb\\Users\\UsersServiceProvider"
-			]
+			],
+			"aliases": {
+				"LaravelUsers": "Davidcb\\Users\\Facade"
+			}
 		}
 	}
 }
