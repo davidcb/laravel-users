@@ -2,16 +2,11 @@
 
 namespace Davidcb\Users\Models;
 
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Notifications\Notifiable;
+use App\Models\User as UserModel;
 
-class User extends Authenticatable
+class User extends UserModel
 {
-	use Notifiable;
-
-	protected $fillable = ['name', 'email', 'password', 'role_id'];
-
-	protected $hidden = ['password', 'remember_token'];
+	protected $fillable = ['role_id'];
 
 	public function role() {
 		return $this->belongsTo(Role::class);
