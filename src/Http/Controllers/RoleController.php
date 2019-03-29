@@ -22,7 +22,7 @@ class RoleController extends Controller
         $pagination = new Pagination($roles, $perPage = 20, request()->except('page'));
         $roles = $pagination->results();
 
-        return view('roles::index', compact('roles', 'pagination'));
+        return view('users::role.index', compact('roles', 'pagination'));
     }
 
     /**
@@ -33,7 +33,7 @@ class RoleController extends Controller
     public function create()
     {
         $permissions = Permission::all();
-        return view('roles::create', compact('permissions'));
+        return view('users::role.create', compact('permissions'));
     }
 
     /**
@@ -61,7 +61,7 @@ class RoleController extends Controller
     public function edit(Role $role)
     {
         $permissions = Permission::all();
-        return view('roles::edit', compact('role', 'permissions'));
+        return view('users::role.edit', compact('role', 'permissions'));
     }
 
     /**

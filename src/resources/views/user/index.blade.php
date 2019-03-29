@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -33,7 +33,7 @@
 							<td class="checkbox2"><input type="checkbox" name="selected[]" value="{{ $user->id }}" class="check" /></td>
 							<td>{{ $user->name }}</td>
 							<td>{{ $user->email }}</td>
-							<td>{{ $user->role->name }}</td>
+							<td>{{ optional($user->role)->name }}</td>
 							<td class="actions">
 								<a class="edit" href="{{ route('admin.users.edit', $user->id) }}"><i class="fa fa-edit"></i></a>
 								<a class="delete" href="{{ route('admin.users.destroy', $user->id) }}"><i class="fa fa-trash"></i></a>

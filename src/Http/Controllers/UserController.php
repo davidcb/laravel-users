@@ -22,7 +22,7 @@ class UserController extends Controller
         $pagination = new Pagination($users, $perPage = 20, request()->except('page'));
         $users = $pagination->results();
 
-        return view('users::index', compact('users', 'pagination'));
+        return view('users::user.index', compact('users', 'pagination'));
     }
 
     /**
@@ -33,7 +33,7 @@ class UserController extends Controller
     public function create()
     {
         $roles = Role::get();
-        return view('users::create', compact('roles'));
+        return view('users::user.create', compact('roles'));
     }
 
     /**
@@ -60,7 +60,7 @@ class UserController extends Controller
     public function edit(User $user)
     {
         $roles = Role::get();
-        return view('users::edit', compact('user', 'roles'));
+        return view('users::user.edit', compact('user', 'roles'));
     }
 
     /**
